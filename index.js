@@ -112,6 +112,6 @@ for (namespace of namespaces) {
     }
   }
   let json = JSON.stringify(shortcuts);
-  let jsonFileName = 'suggestions/' + namespace + '.json';
+  let jsonFileName = 'public/suggestions/' + namespace + '.json';
   fs.writeFileSync(jsonFileName, json, 'utf8');
 }
