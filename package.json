@@ -1,0 +1,19 @@
+{
+  "name": "trovu-suggest",
+  "version": "1.0.0",
+  "description": "Generate JSON file to serve suggestion from trovu-data.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trovu/trovu-suggest.git"
+  },
+  "author": "Georg Jaehnig",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trovu/trovu-suggest/issues"
+  },
+  "homepage": "https://github.com/trovu/trovu-suggest#readme"
+}
