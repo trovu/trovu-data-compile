@@ -1,21 +1,21 @@
 {
-  "name": "trovu-suggest",
+  "name": "trovu-data-compile",
   "version": "1.0.0",
-  "description": "Generate JSON file to serve suggestion from trovu-data.",
+  "description": "Compile data from trovu-data for suggestions etc.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/trovu/trovu-suggest.git"
+    "url": "git+https://github.com/trovu/trovu-data-compile.git"
   },
   "author": "Georg Jaehnig",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/trovu/trovu-suggest/issues"
+    "url": "https://github.com/trovu/trovu-data-compile/issues"
   },
-  "homepage": "https://github.com/trovu/trovu-suggest#readme",
+  "homepage": "https://github.com/trovu/trovu-data-compile#readme",
   "dependencies": {
     "js-yaml": "^3.12.2"
   }
