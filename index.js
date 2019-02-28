@@ -79,19 +79,19 @@ function getPlaceholdersFromString(str, prefix) {
 var fs = require('fs');
 jsyaml = require('js-yaml');
 
-var shortcuts = {};
 let shortcutsPath = '../trovu-data/shortcuts';
 
 namespaces = fs.readdirSync(shortcutsPath);
 
 // Interate over all namespaces.
 for (namespace of namespaces) {
+  let shortcuts = [];
   let namespacePath = shortcutsPath + '/' + namespace;
   keywords = fs.readdirSync(namespacePath);
 
   // Interate over all keywords.
   for (keyword of keywords) {
-    shortcuts[keyword] = {};
+    //shortcuts[keyword] = {};
     let keywordPath = namespacePath + '/' + keyword;
     filenames = fs.readdirSync(keywordPath) ;
 
@@ -102,17 +102,16 @@ for (namespace of namespaces) {
       var yml = fs.readFileSync(filenamePath, 'utf8');
       shortcut = jsyaml.safeLoad(yml);
       arguments = getArgumentsFromString(shortcut.url);
-      shortcuts[keyword][argumentCount] = {
+      let obj = {
         keyword: keyword,
         arguments: Object.keys(arguments),
         namespace: namespace,
         title: shortcut.title,
-      }
-      //console.log(shortcuts[keyword][argumentCount]);
-      //break;
+      };
+      shortcuts.push(obj);
     }
-    //break;
   }
-  console.log(shortcuts);
-  break;
+  let json = JSON.stringify(shortcuts);
+  let jsonFileName = 'json/' + namespace + '.json';
+  fs.writeFileSync(jsonFileName, json, 'utf8');
 }
