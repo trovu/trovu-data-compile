@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/trovu/trovu-suggest/issues"
   },
-  "homepage": "https://github.com/trovu/trovu-suggest#readme"
+  "homepage": "https://github.com/trovu/trovu-suggest#readme",
+  "dependencies": {
+    "js-yaml": "^3.12.2"
+  }
 }
